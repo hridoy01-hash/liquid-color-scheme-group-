@@ -1,0 +1,79 @@
+{
+    "name": "Color Settings",
+    "settings": [
+      {
+        "type": "color_scheme_group",
+        "id": "color_schemes",
+        "definition": [
+          {
+            "type": "color",
+            "id": "background",
+            "label": "Background Color",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color_background",
+            "id": "background_gradient",
+            "label": "Background Gradient Color"
+          },
+          {
+            "type": "color",
+            "id": "text",
+            "label": "Text Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "primary_button",
+            "label": "Primary Button Background Color",
+            "default": "#007bff"
+          },
+          {
+            "type": "color",
+            "id": "on_primary_button",
+            "label": "Primary Button Text Color",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "id": "secondary_button",
+            "label": "Secondary Button Background Color",
+            "default": "#e0e0e0"
+          },
+          {
+            "type": "color",
+            "id": "on_secondary_button",
+            "label": "Secondary Button Text Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "links",
+            "label": "Link Color",
+            "default": "#007bff"
+          },
+          {
+            "type": "color",
+            "id": "icons",
+            "label": "Icon Color",
+            "default": "#000000"
+          }
+        ],
+        "role": {
+          "background": {
+            "solid": "background",
+            "gradient": "background_gradient"
+          },
+          "text": "text",
+          "primary_button": "primary_button",
+          "on_primary_button": "on_primary_button",
+          "primary_button_border": "primary_button",
+          "secondary_button": "secondary_button",
+          "on_secondary_button": "on_secondary_button",
+          "secondary_button_border": "secondary_button",
+          "icons": "icons",
+          "links": "links"
+        }
+      }
+    ]
+  }
