@@ -1,0 +1,65 @@
+<style>
+ {% for scheme in settings.color_schemes %}
+  .color-{{ scheme.id }} {
+    --color-background: {{ scheme.settings.background }};
+    --color-background-gradient: {{ scheme.settings.background_gradient }};
+    --color-text: {{ scheme.settings.text }};
+    --color-primary-button: {{ scheme.settings.primary_button }};
+    --color-on-primary-button: {{ scheme.settings.on_primary_button }};
+    --color-primary-button-border: {{ scheme.settings.primary_button }};
+    --color-secondary-button: {{ scheme.settings.secondary_button }};
+    --color-on-secondary-button: {{ scheme.settings.on_secondary_button }};
+    --color-secondary-button-border: {{ scheme.settings.secondary_button }};
+    --color-link: {{ scheme.settings.links }};
+    --color-icon: {{ scheme.settings.icons }};
+  }
+{% endfor %}
+  
+   .custom-section.color-{{ section.settings.color_scheme }} {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+  
+  .custom-section.color-{{ section.settings.color_scheme }} h2 {
+    color: var(--color-text);
+  }
+
+  .custom-section.color-{{ section.settings.color_scheme }} .custom-button {
+    background-color: var(--color-primary-button);
+    color: var(--color-on-primary-button);
+    border-color: var(--color-primary-button-border);
+  }
+
+  .custom-section.color-{{ section.settings.color_scheme }} .custom-button:hover {
+    background-color: var(--color-secondary-button);
+    color: var(--color-on-secondary-button);
+    border-color: var(--color-secondary-button-border);
+  }
+
+
+</style>
+
+<div class="custom-section color-{{ section.settings.color_scheme }}">
+  <h2>Custom Section with Color Scheme</h2>
+  <button class="custom-button">Click Me!</button>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Color Section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Select Color Scheme",
+      "default": "scheme_1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Color Section"
+    }
+  ]
+}
+{% endschema %}
+
